@@ -1,0 +1,73 @@
+/* General body styles */
+body {
+    margin: 0;
+    background-size: cover;
+    color: #8b4513; /* Light cream color for text */
+    background-image: url('../image/background.jpg'); /* Background image */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* Sign-up container styles */
+.signup-container {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background for the dialog */
+    padding: 35px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    width: 400px; 
+    margin: auto; /* Center the form */
+    margin-top: 20px;
+    z-index: 0; /* Ensure form is above the background */    
+}
+
+.signup-container h1 {
+    margin-bottom: 10px; /* Space below the header */
+    color: #8b4513; /* Dark brown color for the heading */
+    font-size: 2.2rem; /* Font size for the heading */
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* Input and Select Styles */
+.signup-container input,
+.signup-container select {
+    width: 100%; 
+    padding: 8px; 
+    margin: 9px 0; /* Space between inputs */
+    border: 1px solid #dcdcdc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+    color: #4a4a4a; /* Input text color for readability */
+}
+
+/* Button Styles */
+.signup-container button {
+    background-color: #8b4513; /* Dark brown color for buttons */
+    color: #f5f5dc; /* Light cream color for button text */
+    padding: 12px; 
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    width: 100%; /* Full width of the button */
+    font-size: 1.2rem; /* Font size for the button */
+}
+
+/* Hover effects for buttons */
+.signup-container button:hover {
+    background: linear-gradient(135deg, #b8860b, #deb887); /* Gradient on hover */
+}
+
+/* Style for the link to login */
+.signup-container p {
+    margin-top: 20px; /* Space above the paragraph */
+}
+
+.signup-container a {
+    color: #8b4513; /* Light cream color for the link */
+    text-decoration: none; /* No underline */
+}
+
+.signup-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

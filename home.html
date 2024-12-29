@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elegant Atelier - Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-content" id="mainContent">
+        <!-- Free Shipping Banner -->
+        <div class="free-shipping-banner">
+            <p>Enjoy Free Shipping on All Orders!</p>
+        </div>
+        
+        <header class="header">
+            <div class="top-bar">
+                <div class="call-info">
+                    <p class="phone-number">Call: <span>+123456789</span></p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="main-header">
+                <div class="header-left">
+                    <div class="menu-icon" onclick="toggleSidebar()">
+                        <i class="bx bx-menu"></i>
+                    </div>
+                    
+                    
+                        <div class="icon-container">
+                          <!-- Search Icon -->
+                          <div class="search-icon" id="search-icon">
+                            <i class="bx bx-search"></i>
+                          </div>
+                          <!-- Search Input (hidden by default) -->
+                          <input type="text" id="search-input" class="search-input" placeholder="Search..." oninput="showResults()" />
+                          <!-- Search Results (hidden by default) -->
+                          <div id="search-results" class="search-results"></div>
+                        </div>
+                    </div>
+                    
+                      
+                      
+                
+
+                <div class="header-logo">
+                    <h1>The Elegant Atelier</h1>
+                </div>
+
+                <div class="header-right">
+                    <div class="icon-container">
+                        <a href="signup.html">
+                            <button class="sign-in-button">
+                                <i class="bx bx-user"></i>
+                            </button>
+                        </a>
+                    
+                    
+                        <!-- Cart Icon -->
+                <div class="cart-icon" id="cart-toggle">
+                   <i class="bx bx-shopping-bag"></i>
+                   <span id="cart-count">0</span> <!-- Dynamic cart item count -->
+                </div>
+
+<!-- Cart items display (hidden by default) -->
+                <div id="cart" style="display:none;">
+                   <ul id="cart-items"></ul>
+                   <div id="total-amount">Total: $0.00</div>
+                <button id="place-order">Place Order</button>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="content-placeholder">
+            <h2>Welcome to The Elegant Atelier</h2>
+            <p>Your one-stop shop for exquisite jewelry pieces.</p>
+        </div>
+    </div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+            <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        </div>
+        <ul class="sidebar-list">
+            <li><a href="#all-jewelry">All Jewelry</a></li>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#rings">Rings</a></li>
+            <li><a href="#necklaces">Necklaces</a></li>
+            <li><a href="#earrings">Earrings</a></li> <!-- Corrected link -->
+            <li><a href="#sales">Sales</a></li> <!-- Corrected link -->
+            <li><a href="#accessories">Accessories</a></li> <!-- Corrected link -->
+        </ul>
+        
+    </nav>
+
+  <!-- All Jewelry Section -->
+<section id="all-jewelry">
+    <h2>All Jewelry</h2>
+    <div class="product-grid">
+        <!-- Earrings -->
+        <div class="product-item">
+            <img src="image/earring 1.jpg" alt="Earring 1">
+            <h3>Waterdroplet Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.5)</span>
+            </div>
+            <p class="sold-count">(567 sold)</p>
+            <p class="price">$5</p>
+            <button class="add-to-cart" 
+                data-id="1" 
+                data-name="Waterdroplet Earring" 
+                data-price="5.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <!-- Bold Drop Earring -->
+        <div class="product-item">
+            <img src="image/earring 2.jpg" alt="Earring 2">
+            <h3>Bold Drop Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.1)</span>
+            </div>
+            <p class="sold-count">(500 sold)</p>
+            <p class="price">$8</p>
+            <button class="add-to-cart" 
+                data-id="2" 
+                data-name="Bold Drop Earring" 
+                data-price="8.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <!-- Butterfly Earring -->
+        <div class="product-item">
+            <img src="image/earring 3.jpg" alt="Earring 3">
+            <h3>Butterfly Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.2)</span>
+            </div>
+            <p class="sold-count">(345 sold)</p>
+            <p class="price">$12</p>
+            <button class="add-to-cart" 
+                data-id="3" 
+                data-name="Butterfly Earring" 
+                data-price="12.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <!-- NLC Clover Earring -->
+        <div class="product-item">
+            <img src="image/earring 4.jpg" alt="Earring 4">
+            <h3>NLC Clover Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4..8)</span>
+            </div>
+            <p class="sold-count">(600 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="4" 
+                data-name="NLC Clover Earring" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <!-- Pearl Hoop Earring -->
+        <div class="product-item">
+            <img src="image/earring 5.jpg" alt="Earring 5">
+            <h3>Pearl Hoop Earring</h3>
+            <div class="rating">
+                ★★★☆☆ <span>(4.0)</span>
+            </div>
+            <p class="sold-count">(456 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="5" 
+                data-name="Pearl Hoop Earring" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <!-- Rings -->
+        <div class="product-item">
+            <img src="image/ring 1.jpg" alt="Ring 1">
+            <h3>Golden Horizon</h3>
+            <div class="rating">
+                ★★★☆☆ <span>(3.9)</span>
+            </div>
+            <p class="sold-count">(412 sold)</p>
+            <p class="price">$10</p>
+            <button class="add-to-cart" 
+                data-id="6" 
+                data-name="Golden Horizon" 
+                data-price="10.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ring 2.jpg" alt="Ring 2">
+            <h3>Eternal Flame</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.7)</span>
+            </div>
+            <p class="sold-count">(567 sold)</p>
+            <p class="price">$25</p>
+            <button class="add-to-cart" 
+                data-id="7" 
+                data-name="Eternal Flame" 
+                data-price="25.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ring 3.jpg" alt="Ring 3">
+            <h3>Lotus Gold Ring</h3>
+            <div class="rating">
+                ★★★☆☆ <span>(4.0)</span>
+            </div>
+            <p class="sold-count">(499 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="8" 
+                data-name="Lotus Gold Ring" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ring 4.jpg" alt="Ring 4">
+            <h3>Sapphire Reverie Ring</h3>
+            <p class="price">$12</p>
+            <button class="add-to-cart" 
+                data-id="9" 
+                data-name="Sapphire Reverie Ring" 
+                data-price="12.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ring 5.jpg" alt="Ring 5">
+            <h3>Velvet Echo Ring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$5</p>
+            <button class="add-to-cart" 
+                data-id="10" 
+                data-name="Velvet Echo Ring" 
+                data-price="5.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <!-- Necklaces -->
+        <div class="product-item">
+            <img src="image/necklace 1.jpg" alt="Necklace 1">
+            <h3>Gold Heart Necklace</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.3)</span>
+            </div>
+            <p class="sold-count">(700 sold)</p>
+                
+            <p class="price">$25</p>
+            <button class="add-to-cart" 
+                data-id="11" 
+                data-name="Gold Heart Necklace" 
+                data-price="25.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/necklace 2.jpg" alt="Necklace 2">
+            <h3>Diamond Charm Necklace</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.6)</span>
+            </div>
+            <p class="sold-count">(489 sold)</p>
+            <p class="price">$11</p>
+            <button class="add-to-cart" 
+                data-id="12" 
+                data-name="Diamond Charm Necklace" 
+                data-price="11.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/necklace 3.jpg" alt="Necklace 3">
+            <h3>Black Swan Necklace</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.1)</span>
+            </div>
+            <p class="sold-count">(367 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="13" 
+                data-name="Black Swan Necklace" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/necklace 4.jpg" alt="Necklace 4">
+            <h3>Peral Necklace</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.0)</span>
+            </div>
+            <p class="sold-count">(349 sold)</p>
+            <p class="price">$7</p>
+            <button class="add-to-cart" 
+                data-id="14" 
+                data-name="Peral Necklace" 
+                data-price="7.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/necklace 5.jpg" alt="Necklace 5">
+            <h3>Infinity Necklace</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.2)</span>
+            </div>
+            <p class="sold-count">(345 sold)</p>
+            <p class="price">$17</p>
+            <button class="add-to-cart" 
+                data-id="15" 
+                data-name="Infinity Necklace" 
+                data-price="17.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <!-- Bracelets -->
+        <div class="product-item">
+            <img src="image/bracelet 1.jpg" alt="Bracelet 1">
+            <h3>Flower Charm</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.6)</span>
+            </div>
+            <p class="sold-count">(567 sold)</p>
+            <p class="price">$14</p>
+            <button class="add-to-cart" 
+                data-id="16" 
+                data-name="Flower Charm" 
+                data-price="14.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/bracelet 2.jpg" alt="Bracelet 2">
+            <h3>Golden Heart</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.0)</span>
+            </div>
+            <p class="sold-count">(128 sold)</p>
+            <p class="price">$9</p>
+            <button class="add-to-cart" 
+                data-id="17" 
+                data-name="Golden Heart" 
+                data-price="9.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/bracelet 3.jpg" alt="Bracelet 3">
+            <h3>Steel Charm</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.9)</span>
+            </div>
+            <p class="sold-count">(775 sold)</p>
+            <p class="price">$13</p>
+            <button class="add-to-cart" 
+                data-id="18" 
+                data-name="Steel Charm" 
+                data-price="13.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/bracelet 4.jpg" alt="Bracelet 4">
+            <h3>Chain Link Bracelet</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$8</p>
+            <button class="add-to-cart" 
+                data-id="19" 
+                data-name="Chain Link Bracelet" 
+                data-price="8.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/bracelet 5.jpg" alt="Bracelet 5">
+            <h3>Silver Elegance</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.3)</span>
+            </div>
+            <p class="sold-count">(189 sold)</p>
+            <p class="price">$18</p>
+            <button class="add-to-cart" 
+                data-id="20" 
+                data-name="Silver Elegance" 
+                data-price="18.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- New Arrivals Section -->
+<section id="new-arrivals">
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+        <!-- New Earrings -->
+        <div class="product-item">
+            <img src="image/New Arrival 1.jpg" alt="New Necklaces">
+            <p>New Trend Necklaces</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.9)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$18</p>
+            <button class="add-to-cart" 
+                data-id="1" 
+                data-name="New Trend Necklaces" 
+                data-price="18.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <!-- New Rings -->
+        <div class="product-item">
+            <img src="image/New Arrival 4.jpg" alt="New Rings">
+            <p>Fresh Ring</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(899 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="2" 
+                data-name="Fresh Ring" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <!-- New Necklaces -->
+        <div class="product-item">
+            <img src="image/New Arrival 2.jpg" alt="New Earrings">
+            <p>Modern Earring</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(905 sold)</p>
+            <p class="price">$30</p>
+            <button class="add-to-cart" 
+                data-id="3" 
+                data-name="Modern Earring" 
+                data-price="30.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <!-- New Bracelets -->
+        <div class="product-item">
+            <img src="image/New Arrival 3.jpg" alt="New Bracelets">
+            <p>New Leather Bracelet</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.6)</span>
+            </div>
+            <p class="sold-count">(689 sold)</p>
+            <p class="price">$25</p>
+            <button class="add-to-cart" 
+                data-id="4" 
+                data-name="New Leather Bracelet" 
+                data-price="25.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Rings Section -->
+<section id="rings">
+    <h2>Rings</h2>
+    <div class="product-grid">
+        <!-- Example Rings -->
+        <div class="product-item">
+            <img src="image/ring 1.jpg" alt="Ring 1">
+            <p>Golden Horizon</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$10</p>
+           <button class="add-to-cart" 
+                data-id="1" 
+                data-name="Golden Horizon" 
+                data-price="10.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <div class="product-item">
+            <img src="image/ring 2.jpg" alt="Ring 2">
+            <p>Eternal Flame</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(567 sold)</p>
+            <p class="price">$25</p>
+            <button class="add-to-cart" 
+                data-id="2" 
+                data-name="Eternal Flame" 
+                data-price="25.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <div class="product-item">
+            <img src="image/ring 3.jpg" alt="Ring 3">
+            <p>Lotus Gold Ring</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.5)</span>
+            </div>
+            <p class="sold-count">(456 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="3" 
+                data-name="Lotus Gold Ring" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ring 4.jpg" alt="Ring 4">
+            <p>Sapphire Reverie Ring</p>
+            <div class="rating">
+                ★★★☆☆ <span>(3.8)</span>
+            </div>
+            <p class="sold-count">(234 sold)</p>
+            <p class="price">$12</p>
+            <button class="add-to-cart" 
+                data-id="4" 
+                data-name="Sapphire Reverie Ring" 
+                data-price="12.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/ring 5.jpg" alt="Ring 5">
+            <p>Velvet Echo Ring</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$5</p>
+            <button class="add-to-cart" 
+                data-id="5" 
+                data-name="Velvet Echo Ring" 
+                data-price="5.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Bracelets Section -->
+<section id="bracelets">
+    <h2>Bracelets</h2>
+    <div class="product-grid">
+       
+        <div class="product-item">
+            <img src="image/bracelet 1.jpg" alt="Bracelet 1">
+            <p>Flower Charm</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.1)</span>
+            </div>
+            <p class="sold-count">(589 sold)</p>
+            <p class="price">$14</p>
+            <button class="add-to-cart" 
+                data-id="1" 
+                data-name="Flower Charm" 
+                data-price="14.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <div class="product-item">
+            <img src="image/bracelet 2.jpg" alt="Bracelet 2">
+            <p>Bead Charm</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(456 sold)</p>
+            <p class="price">$24</p>
+            <button class="add-to-cart" 
+                data-id="2" 
+                data-name="Bead Charm" 
+                data-price="24.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <div class="product-item">
+            <img src="image/bracelet 3.jpg" alt="Bracelet 3">
+            <p>Gold Peral</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.9)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$19</p>
+            <button class="add-to-cart" 
+                data-id="3" 
+                data-name="Gold Peral" 
+                data-price="19.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/bracelet 4.jpg" alt="Bracelet 4">
+            <p>Golden Hoop</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.4)</span>
+            </div>
+            <p class="sold-count">(567 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="4" 
+                data-name="Golden Hoop" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+
+        <div class="product-item">
+            <img src="image/bracelet 5.jpg" alt="Bracelet 5">
+            <p>White Swan Clover</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.6)</span>
+            </div>
+            <p class="sold-count">(234 sold)</p>
+            <p class="price">$5</p>
+            <button class="add-to-cart" 
+                data-id="5" 
+                data-name="White Swan Clover" 
+                data-price="5.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+    </div>
+</section>
+
+
+<!-- Necklaces Section -->
+<section id="necklaces">
+    <h2>Necklaces</h2>
+    <div class="product-grid">
+        
+        <div class="product-item">
+            <img src="image/necklace 1.jpg" alt="Necklace 1">
+            <p>Gold Heart Necklace</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$25</p>
+            <button class="add-to-cart" 
+                data-id="1" 
+                data-name="Gold Heart Necklace" 
+                data-price="25.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <div class="product-item">
+            <img src="image/necklace 2.jpg" alt="Necklace 2">
+            <p>Diamond Charm Necklace</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(799 sold)</p>
+            <p class="price">$11</p>
+            <button class="add-to-cart" 
+                data-id="2" 
+                data-name="Diamond Charm Necklace" 
+                data-price="11.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+       
+        <div class="product-item">
+            <img src="image/necklace 3.jpg" alt="Necklace 3">
+            <p>Black Swan Necklace</p>
+            <div class="rating">
+                ★★★★☆ <span>(4.2)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="3" 
+                data-name="Black Swan Necklace" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        
+        <div class="product-item">
+            <img src="image/necklace 4.jpg" alt="Necklace 4">
+            <p>Peral Necklace</p>
+            <div class="rating">
+                ★★★☆☆ <span>(3.7)</span>
+            </div>
+            <p class="sold-count">(200 sold)</p>
+            <p class="price">$7</p>
+            <button class="add-to-cart" 
+                data-id="4" 
+                data-name="Peral Necklace" 
+                data-price="7.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div> 
+
+        <div class="product-item">
+            <img src="image/necklace 5.jpg" alt="Necklace 5">
+            <p>Infinity Necklace</p>
+            <div class="rating">
+                ★★★☆☆ <span>(3.7)</span>
+            </div>
+            <p class="sold-count">(333 sold)</p>
+            <p class="price">$17</p>
+            <button class="add-to-cart" 
+                data-id="5" 
+                data-name="Infinity Necklace" 
+                data-price="17.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Earrings Section -->
+<div id="earrings">
+    <h2>Earrings</h2>
+    <div class="product-grid">
+        <!-- Example Product 1 -->
+        <div class="product-item">
+            <img src="image/earring 1.jpg" alt="Earring 1">
+            <h3>Waterdroplet Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$5</p>
+            <button class="add-to-cart" 
+                data-id="1" 
+                data-name="Waterdroplet Earring" 
+                data-price="5.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <!-- Example Product 2 -->
+        <div class="product-item">
+            <img src="image/earring 2.jpg" alt="Earring 2">
+            <h3>Bold Drop Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(999 sold)</p>
+            <p class="price">$8</p>
+            <button class="add-to-cart" 
+                data-id="2" 
+                data-name="Bold Drop Earring" 
+                data-price="8.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/earring 3.jpg" alt="Earring 3">
+            <h3>Butterfly Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$12</p>
+            <button class="add-to-cart" 
+                data-id="3" 
+                data-name="Butterfly Earring" 
+                data-price="12.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/earring 4.jpg" alt="Earring 4">
+            <h3>NLC Clover Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.0)</span>
+            </div>
+            <p class="sold-count">(389 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="4" 
+                data-name="NLC Clover Earring" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/earring 5.jpg" alt="Earring 5">
+            <h3>Pearl Hoop Earring</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(733 sold)</p>
+            <p class="price">$15</p>
+            <button class="add-to-cart" 
+                data-id="5" 
+                data-name="Pearl Hoop Earring" 
+                data-price="15.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sales Section -->
+<div id="sales">
+    <h2>Sales</h2>
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="image/Sale Earring 1.jpg" alt="Sale Item 1">
+            <p class="sale-price"><span class="original-price">$25</span> $18</p>
+            <span class="sale-icon">Golden Hoop</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.4)</span>
+            </div>
+            <p class="sold-count">(589 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 1" 
+                data-name="Golden Hoop" 
+                data-price="18.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Earring 2.jpg" alt="Sale Item 2">
+            <p class="sale-price"><span class="original-price">$15</span> $8</p>
+            <span class="sale-icon">Gold Cuff Hoop</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 2" 
+                data-name="Gold Cuff Hoop" 
+                data-price="8.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Earring 3.jpg" alt="Sale Item 3">
+            <p class="sale-price"><span class="original-price">$20</span> $13</p>
+            <span class="sale-icon">Hoop Earring</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.9)</span>
+            </div>
+            <p class="sold-count">(799 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 3" 
+                data-name="Hoop Earring" 
+                data-price="13.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Ring 1.jpg" alt="Sale Item 4">
+            <p class="sale-price"><span class="original-price">$35</span> $23</p>
+            <span class="sale-icon">Moonlit Whispher</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.2)</span>
+            </div>
+            <p class="sold-count">(888 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 4" 
+                data-name="Moonlit Whispher" 
+                data-price="23.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Ring 2.jpg" alt="Sale Item 5">
+            <p class="sale-price"><span class="original-price">$20</span> $17</p>
+            <span class="sale-icon">Silver Stone</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.4)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 5" 
+                data-name="Silver Stone" 
+                data-price="17.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Ring 3.jpg" alt="Sale Item 6">
+            <p class="sale-price"><span class="original-price">$32</span> $27</p>
+            <span class="sale-icon">Silver Bead</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.1)</span>
+            </div>
+            <p class="sold-count">(234 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 6" 
+                data-name="Silver Bead" 
+                data-price="27.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Necklace 1.jpg" alt="Sale Item 7">
+            <p class="sale-price"><span class="original-price">$35</span> $29</p>
+            <span class="sale-icon">Blue Charm Stone</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.3)</span>
+            </div>
+            <p class="sold-count">(780 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 7" 
+                data-name="Blue Charm Stone" 
+                data-price="29.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Necklace 2.jpg" alt="Sale Item 8">
+            <p class="sale-price"><span class="original-price">$30</span> $21</p>
+            <span class="sale-icon">Black Heart</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(788 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 8" 
+                data-name="Black Heart" 
+                data-price="21.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="image/Sale Bracelet 1.jpg" alt="Sale Item 9">
+            <p class="sale-price"><span class="original-price">$35</span> $23</p>
+            <span class="sale-icon">Chain Bracelet</span>
+            <div class="rating">
+                ★★★★☆ <span>(4.3)</span>
+            </div>
+            <p class="sold-count">(289 sold)</p>
+            <button class="add-to-cart" 
+                data-id="Sale Item 9" 
+                data-name="Chain Bracelet" 
+                data-price="23.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Accessories Section -->
+<div id="accessories">
+    <h2>Accessories</h2>
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="image/Accessories 1.jpg" alt="Accessory Item 1">
+            <h3>Jewelry Envelop</h3>
+            <div class="rating">
+                ★★★★☆ <span>(4.8)</span>
+            </div>
+            <p class="sold-count">(789 sold)</p>
+            <p class="price">$8</p>
+            <button class="add-to-cart" 
+                data-id="1" 
+                data-name="Jewelry Envelop" 
+                data-price="8.00" 
+                onclick="addToCart(this)">
+                Add to Cart <i class="cart-icon">&#128722;</i>
+            </button>
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+</div>
+
+
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="social-link"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="social-link"><i class="bx bxl-instagram"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="loadSection('reviews')">Customer Reviews</a>
+                <a href="#" class="footer-link" onclick="loadSection('about')">About Us</a>
+                <a href="#" class="footer-link" onclick="loadSection('shipping')">Shipping Policy</a>
+            </div>
+            <h3 class="store-name">The Elegant Atelier © 2024</h3>
+            <p>
+                <a href="#" class="footer-link" onclick="loadSection('contact')">Contact Us</a> | 
+                <a href="#" class="footer-link" onclick="loadSection('privacy')">Privacy Policy</a> | 
+                <a href="#" class="footer-link" onclick="loadSection('refund')">Return and Refund Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
